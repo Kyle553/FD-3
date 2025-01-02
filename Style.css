@@ -123,14 +123,44 @@ button:active {
   width: 24px;
 }
 
-/* I'll finish it later
+/* I'll finish it later */
 @media (prefers-color-scheme: light) {
 
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #2B2B2B;
+    --card-background-color: #3D3D3D;
+    --card-border-color: #565656; 
+  }
 
-} */
+  @property --hover-button {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #4F4F4F; 
+  }
+  
+  @property --active-button {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #3A3A3A; 
+  }
+
+  .photo > img {
+    border-color: #6B6B6B;
+  }
+
+  button {
+    background-color:  #4A4A4A;
+    border-color: #6B6B6B;
+    color: #d7d7d8;
+  }
+
+  .text {
+    color: #d7d7d8;
+  }
+}
 
 /* Not finished */
  @media (min-width: 768px) and (min-height: 1024px) {
@@ -148,11 +178,17 @@ button:active {
     align-items: center;
   }
   
+  .photo-button {
+    justify-content: flex-start;
+    height: auto;
+  }
+  
   .text {
     align-items: center;
     text-align: center;
     font-size: 16px;
     width: 250px;
-    height: 436px;
+    height: auto;
+    margin: 0px;
   }
 }
